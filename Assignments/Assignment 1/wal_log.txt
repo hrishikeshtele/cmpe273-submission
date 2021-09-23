@@ -1,0 +1,28 @@
+{
+	"change": [
+	]
+}
+{
+	"change": [
+		{
+			"kind": "insert",
+			"schema": "public",
+			"table": "students",
+			"columnnames": ["id", "first_name", "last_name", "email", "sjsu_id", "create_timestamp", "update_timestamp"],
+			"columntypes": ["bigint", "character varying(255)", "character varying(255)", "character varying(255)", "character varying(20)", "timestamp with time zone", "timestamp with time zone"],
+			"columnvalues": [33416, "h", "t", "a@c.com", "123", "2021-09-22 23:48:44.818572-07", "2021-09-22 23:48:44.818572-07"]
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "insert",
+			"schema": "public",
+			"table": "students",
+			"columnnames": ["id", "first_name", "last_name", "email", "sjsu_id", "create_timestamp", "update_timestamp"],
+			"columntypes": ["bigint", "character varying(255)", "character varying(255)", "character varying(255)", "character varying(20)", "timestamp with time zone", "timestamp with time zone"],
+			"columnvalues": [33417, "h", "t", "a@c.com", "123", "2021-09-22 23:50:14.487963-07", "2021-09-22 23:50:14.487963-07"]
+		}
+	]
+}

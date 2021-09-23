@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Request {
+   string transaction = 1;
+}
+
+message Response {
+   bool status = 1;
+}
+
+service DBReplicator {
+  rpc execute_query(Request) returns (Response) {}
+}
