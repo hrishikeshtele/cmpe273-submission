@@ -26,3 +26,179 @@
 		}
 	]
 }
+{
+	"change": [
+		{
+			"kind": "insert",
+			"schema": "public",
+			"table": "students",
+			"columnnames": ["id", "first_name", "last_name", "email", "sjsu_id", "create_timestamp", "update_timestamp"],
+			"columntypes": ["bigint", "character varying(255)", "character varying(255)", "character varying(255)", "character varying(20)", "timestamp with time zone", "timestamp with time zone"],
+			"columnvalues": [20022, "John", "Doe", "john.doe@sjsu.edu", "1456990", "2021-09-25 15:24:28.421623-07", "2021-09-25 15:24:28.421623-07"]
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "insert",
+			"schema": "public",
+			"table": "students",
+			"columnnames": ["id", "first_name", "last_name", "email", "sjsu_id", "create_timestamp", "update_timestamp"],
+			"columntypes": ["bigint", "character varying(255)", "character varying(255)", "character varying(255)", "character varying(20)", "timestamp with time zone", "timestamp with time zone"],
+			"columnvalues": [20023, "John", "Doe", "john.doe@sjsu.edu", "1456990", "2021-09-25 15:24:58.66147-07", "2021-09-25 15:24:58.66147-07"]
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "insert",
+			"schema": "public",
+			"table": "students",
+			"columnnames": ["id", "first_name", "last_name", "email", "sjsu_id", "create_timestamp", "update_timestamp"],
+			"columntypes": ["bigint", "character varying(255)", "character varying(255)", "character varying(255)", "character varying(20)", "timestamp with time zone", "timestamp with time zone"],
+			"columnvalues": [20024, "John", "Doe", "john.doe@sjsu.edu", "1456990", "2021-09-25 15:35:23.42372-07", "2021-09-25 15:35:23.42372-07"]
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "insert",
+			"schema": "public",
+			"table": "students",
+			"columnnames": ["id", "first_name", "last_name", "email", "sjsu_id", "create_timestamp", "update_timestamp"],
+			"columntypes": ["bigint", "character varying(255)", "character varying(255)", "character varying(255)", "character varying(20)", "timestamp with time zone", "timestamp with time zone"],
+			"columnvalues": [20025, "John", "Doe", "john.doe@sjsu.edu", "1456990", "2021-09-25 15:36:23.98353-07", "2021-09-25 15:36:23.98353-07"]
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "insert",
+			"schema": "public",
+			"table": "students",
+			"columnnames": ["id", "first_name", "last_name", "email", "sjsu_id", "create_timestamp", "update_timestamp"],
+			"columntypes": ["bigint", "character varying(255)", "character varying(255)", "character varying(255)", "character varying(20)", "timestamp with time zone", "timestamp with time zone"],
+			"columnvalues": [20026, "John", "Doe", "john.doe@sjsu.edu", "1456990", "2021-09-25 15:36:42.587487-07", "2021-09-25 15:36:42.587487-07"]
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "insert",
+			"schema": "public",
+			"table": "students",
+			"columnnames": ["id", "first_name", "last_name", "email", "sjsu_id", "create_timestamp", "update_timestamp"],
+			"columntypes": ["bigint", "character varying(255)", "character varying(255)", "character varying(255)", "character varying(20)", "timestamp with time zone", "timestamp with time zone"],
+			"columnvalues": [20027, "John", "Doe", "john.doe@sjsu.edu", "1456990", "2021-09-25 15:37:23.310799-07", "2021-09-25 15:37:23.310799-07"]
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "insert",
+			"schema": "public",
+			"table": "students",
+			"columnnames": ["id", "first_name", "last_name", "email", "sjsu_id", "create_timestamp", "update_timestamp"],
+			"columntypes": ["bigint", "character varying(255)", "character varying(255)", "character varying(255)", "character varying(20)", "timestamp with time zone", "timestamp with time zone"],
+			"columnvalues": [20028, "John", "Doe", "john.doe@sjsu.edu", "1456990", "2021-09-25 15:38:10.964914-07", "2021-09-25 15:38:10.964914-07"]
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "insert",
+			"schema": "public",
+			"table": "students",
+			"columnnames": ["id", "first_name", "last_name", "email", "sjsu_id", "create_timestamp", "update_timestamp"],
+			"columntypes": ["bigint", "character varying(255)", "character varying(255)", "character varying(255)", "character varying(20)", "timestamp with time zone", "timestamp with time zone"],
+			"columnvalues": [20029, "John", "Doe", "john.doe@sjsu.edu", "1456990", "2021-09-25 21:36:55.743024-07", "2021-09-25 21:36:55.743024-07"]
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "delete",
+			"schema": "public",
+			"table": "students",
+			"oldkeys": {
+				"keynames": ["id"],
+				"keytypes": ["bigint"],
+				"keyvalues": [20029]
+			}
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "delete",
+			"schema": "public",
+			"table": "students",
+			"oldkeys": {
+				"keynames": ["id"],
+				"keytypes": ["bigint"],
+				"keyvalues": [20028]
+			}
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "delete",
+			"schema": "public",
+			"table": "students",
+			"oldkeys": {
+				"keynames": ["id"],
+				"keytypes": ["bigint"],
+				"keyvalues": [20027]
+			}
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "delete",
+			"schema": "public",
+			"table": "students",
+			"oldkeys": {
+				"keynames": ["id"],
+				"keytypes": ["bigint"],
+				"keyvalues": [20026]
+			}
+		}
+	]
+}
+{
+	"change": [
+		{
+			"kind": "delete",
+			"schema": "public",
+			"table": "students",
+			"oldkeys": {
+				"keynames": ["id"],
+				"keytypes": ["bigint"],
+				"keyvalues": [3344]
+			}
+		}
+		,{
+			"kind": "delete",
+			"schema": "public",
+			"table": "students",
+			"oldkeys": {
+				"keynames": ["id"],
+				"keytypes": ["bigint"],
+				"keyvalues": [3346]
+			}
+		}
+	]
+}
