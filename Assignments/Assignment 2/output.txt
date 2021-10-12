@@ -3,7 +3,6 @@
 Request:
 curl --location --request POST 'http://127.0.0.1:5000/create' \
 --header 'Content-Type: application/json' \
---header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0' \
 --data-raw '{
   "long_url": "https://www.programiz.com/python3-programming/datetime",
   "title": "HT API Documentation",
@@ -32,7 +31,6 @@ Response:
 Request:
 curl --location --request POST 'http://127.0.0.1:5000/shorten' \
 --header 'Content-Type: application/json' \
---header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0' \
 --data-raw '{
     "long_url": "https://www.programiz.com/python3-programming/datetime",
     "domain": "http://localhost:5000"
@@ -49,8 +47,7 @@ Response:
 3. Get Bitlink
 
 Request:
-curl --location --request GET 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi' \
---header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0'
+curl --location --request GET 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi'
 
 Response:
 {
@@ -70,7 +67,6 @@ Response:
 Request:
 curl --location --request PATCH 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi' \
 --header 'Content-Type: application/json' \
---header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0' \
 --data-raw '{
   "long_url": "https://www.programiz.com/python3-programming/",
   "title": "API Documentation python3",
@@ -96,8 +92,7 @@ Response:
 5. Hit Bitlink
 
 Request:
-curl --location --request GET 'http://localhost:5000/15FTGi' \
---header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0'
+curl --location --request GET 'http://localhost:5000/15FTGi'
 
 Response:
 #Url is invalid, but we are able to hit the long url so that later we can check number of clicks for particular bitlink
@@ -106,8 +101,7 @@ HTML Page, 404
 6. Clicks
 
 Request:
-curl --location --request GET 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi/clicks' \
---header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0'
+curl --location --request GET 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi/clicks'
 
 Response:
 {

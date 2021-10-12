@@ -15,7 +15,6 @@ Create a Bitly clone using Flask.
       ```
       curl --location --request POST 'http://127.0.0.1:5000/create' \
     --header 'Content-Type: application/json' \
-    --header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0' \
     --data-raw '{
         "long_url": "https://www.programiz.com/python3-programming/datetime",
         "title": "HT API Documentation",
@@ -29,15 +28,13 @@ Create a Bitly clone using Flask.
     
   * **Retrieve Bitlink**: This will retrieve url
       ```
-      curl --location --request GET 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi' \
-      --header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0'
+      curl --location --request GET 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi'
       ```
  
   * **Shorten Bitlink**: This will Shorten url
       ```
       curl --location --request POST 'http://127.0.0.1:5000/shorten' \
       --header 'Content-Type: application/json' \
-      --header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0' \
       --data-raw '{
         "long_url": "https://www.programiz.com/python3-programming/datetime",
         "domain": "http://localhost:5000"
@@ -48,7 +45,6 @@ Create a Bitly clone using Flask.
       ```
       curl --location --request PATCH 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi' \
       --header 'Content-Type: application/json' \
-      --header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0' \
       --data-raw '{
         "long_url": "https://www.programiz.com/python3-programming/",
         "title": "API Documentation python3",
@@ -60,13 +56,11 @@ Create a Bitly clone using Flask.
       ```
   * **Hit Bitlink**: This will hit bitlink which has domain as localhost:5000
     ```
-    curl --location --request GET 'http://localhost:5000/15FTGi' \
-    --header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0'
+    curl --location --request GET 'http://localhost:5000/15FTGi'
     ```
   
   * **Clicks**: This will get number of clicks for given bitlink
      ```
-     curl --location --request GET 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi/clicks' \
-     --header 'Cookie: session=f8d5e83a-b322-4420-a4c9-5adc507ee9d0'
+     curl --location --request GET 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi/clicks'
      ```
  
