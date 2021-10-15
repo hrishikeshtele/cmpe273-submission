@@ -102,7 +102,7 @@ _Response_
     "timeline": [ 
         { "user_id": "100", "tweet_id" : "1", "tweet": "Fan art is the best" },
         { "user_id": "101", "tweet_id" : "2", "tweet": "Vaccines have a proven track record of saving lives. Let’s keep it going!" },
-        { "user_id": "101", "tweet_id" : "3", "tweet": "Hello Everyone" },
+        { "user_id": "101", "tweet_id" : "3", "tweet": "Hello Everyone" }
     ]
 }
 ```
