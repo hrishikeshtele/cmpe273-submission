@@ -1,0 +1,112 @@
+1. Create Bitlink
+
+Request:
+curl --location --request POST 'http://127.0.0.1:5000/create' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "long_url": "https://www.programiz.com/python3-programming/datetime",
+  "title": "HT API Documentation",
+  "domain": "http://localhost:5000",
+  "tags": [
+    "ht",
+    "api"
+  ]
+}'
+
+Response:
+{
+    "created_at": "10/11/2021, 15:31:09",
+    "id": "adb3e2c9-d4f1-4a9f-8fff-291130b8a843",
+    "link": "http://localhost:5000/15FTGi",
+    "long_url": "https://www.programiz.com/python3-programming/datetime",
+    "tags": [
+        "ht",
+        "api"
+    ],
+    "title": "HT API Documentation"
+}
+
+2. Shorten Bitlink
+
+Request:
+curl --location --request POST 'http://127.0.0.1:5000/shorten' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "long_url": "https://www.programiz.com/python3-programming/datetime",
+    "domain": "http://localhost:5000"
+}'
+
+Response:
+{
+    "created_at": "10/11/2021, 15:34:15",
+    "id": "04008583-e75b-4be4-b71a-dd6c596b9f6e",
+    "link": "http://localhost:5000/15FTGj",
+    "long_url": "https://www.programiz.com/python3-programming/datetime"
+}
+
+3. Get Bitlink
+
+Request:
+curl --location --request GET 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi'
+
+Response:
+{
+    "created_at": "10/11/2021, 15:31:09",
+    "id": "adb3e2c9-d4f1-4a9f-8fff-291130b8a843",
+    "link": "http://localhost:5000/15FTGi",
+    "long_url": "https://www.programiz.com/python3-programming/datetime",
+    "tags": [
+        "ht",
+        "api"
+    ],
+    "title": "HT API Documentation"
+}
+
+4. Update Bitlink
+
+Request:
+curl --location --request PATCH 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "long_url": "https://www.programiz.com/python3-programming/",
+  "title": "API Documentation python3",
+  "tags": [
+    "python3",
+    "api"
+  ]
+}'
+
+Response:
+{
+    "created_at": "10/11/2021, 15:31:09",
+    "id": "adb3e2c9-d4f1-4a9f-8fff-291130b8a843",
+    "link": "http://localhost:5000/15FTGi",
+    "long_url": "https://www.programiz.com/python3-programming/",
+    "tags": [
+        "python3",
+        "api"
+    ],
+    "title": "API Documentation python3"
+}
+
+5. Hit Bitlink
+
+Request:
+curl --location --request GET 'http://localhost:5000/15FTGi'
+
+Response:
+#Url is invalid, but we are able to hit the long url so that later we can check number of clicks for particular bitlink
+HTML Page, 404
+
+6. Clicks
+
+Request:
+curl --location --request GET 'http://127.0.0.1:5000/bitlinks/http://localhost:5000/15FTGi/clicks'
+
+Response:
+{
+"created_at": "10/11/2021, 15:31:09",
+"link": "http://localhost:5000/15FTGi",
+"long_url": "https://www.programiz.com/python3-programming/",
+"total_clicks": "1"
+}
