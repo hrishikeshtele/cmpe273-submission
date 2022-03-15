@@ -24,6 +24,8 @@ class Listener(payload_pb2_grpc.SendAdaptivePayloadServicer):
             if len(self.data_dic[file_name]) > self.MAXIMUM_SIZE_ALLOWED:
                 self.write_file(file_name)
                 self.data_dic.pop(file_name)
+        for i in range(0, 1000000):
+            continue
         return payload_pb2.Response(status=True)
 
     def write_file(self, file_name):
