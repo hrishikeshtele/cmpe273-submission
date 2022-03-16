@@ -20,14 +20,14 @@ def run(file_path: str):
     li = []
     while len(data) > 0:
         response_time = send_request(data, filename=file_path.split("/")[-1])
-        avg_response_time = int((avg_response_time * chunk_no + response_time) / (chunk_no + 1))
-        # print('avg_response_time', avg_response_time)
+        avg_response_time = ((avg_response_time * chunk_no + response_time) / (chunk_no + 1))
+        print('avg_response_time', avg_response_time)
         if chunk_no == 0:
-            initial_speed = (1024 * 1024) / avg_response_time
+            initial_speed = (1024 * 1024) * avg_response_time
         else:
-            payload_size = int(initial_speed * response_time)
+            payload_size = (initial_speed / avg_response_time)
 
-            li.append([response_time, payload_size ]) #Writing into sources.csv file
+        li.append([avg_response_time, payload_size ]) #Writing into sources.csv file
 #         loop = get_or_create_eventloop()
 #         upload_speed = asyncio.ensure_future(find_upload_speed())
 # #         loop.run_forever()
@@ -37,7 +37,7 @@ def run(file_path: str):
 #         print(thr.start())
         chunk_no += 1
         print('payload_size', payload_size)
-        data = input_file.read(payload_size)
+        data = input_file.read(int(payload_size))
     send_request(data, filename=file_path.split("/")[-1])
 #     print(li)
     with open('sources.csv', 'w',  newline='', encoding='utf-8') as f: #Opening the file with specific path. Please include your path inside open & before sources.csv file
