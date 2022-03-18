@@ -4,17 +4,18 @@ import grpc
 
 import payload_pb2
 import payload_pb2_grpc
-import time
+
 
 class Listener(payload_pb2_grpc.SendAdaptivePayloadServicer):
     MAXIMUM_SIZE_ALLOWED = 1024 * 1024 * 10
     data_dic = {}
     count = 0
+
     def data_transfer(self, request, context):
         file_name = request.filename
         input_bytes = request.data
-        # print("Received " + str(len(input_bytes)))
         if len(input_bytes) == 0:
+            self.count = 0
             self.write_file(file_name)
         else:
             if file_name not in self.data_dic:
@@ -24,12 +25,7 @@ class Listener(payload_pb2_grpc.SendAdaptivePayloadServicer):
             if len(self.data_dic[file_name]) > self.MAXIMUM_SIZE_ALLOWED:
                 self.write_file(file_name)
                 self.data_dic.pop(file_name)
-#         if(self.count==2):
-#             time.sleep(0.0001)
-        for i in range(0, 1000000):
-            continue
-        print(self.count)
-        self.count+=1
+        self.count += 1
         return payload_pb2.Response(status=True)
 
     def write_file(self, file_name):
@@ -41,9 +37,7 @@ class Listener(payload_pb2_grpc.SendAdaptivePayloadServicer):
 def serve():
     # create a gRPC server
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=2))
-
     payload_pb2_grpc.add_SendAdaptivePayloadServicer_to_server(Listener(), server)
-
     print('Starting server. Listening on port 50051.')
     server.add_insecure_port('[::]:50051')
     server.start()
